@@ -1,0 +1,57 @@
+﻿@model Inmobiliaria.Models.Formulario
+
+@{
+    ViewData["Title"] = "Delete";
+}
+
+<h2>Eliminar</h2>
+
+<h3>Esta seguro que desea borrar este registro?</h3>
+<div>
+    <h4>Formulario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.nombre)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.telefono)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.telefono)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.mensaje)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.mensaje)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.tipoOperacion)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.tipoOperacion)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.tipoContacto)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.tipoContacto)
+        </dd>
+    </dl>
+    
+    <form asp-action="Delete">
+        <input type="hidden" asp-for="Id" />
+        <input type="submit" value="Eliminar" class="btn btn-default" /> |
+        <a asp-action="Index">Volver a la Lista</a>
+    </form>
+</div>

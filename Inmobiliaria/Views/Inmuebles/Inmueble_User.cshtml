@@ -1,0 +1,70 @@
+﻿@model IEnumerable<Inmobiliaria.Models.Inmueble>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Publicaciones</h2>
+
+
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.descripcion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.imagen)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.direccion)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.barrio)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ambientes)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.banos)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.cochera)
+            </th>
+            <!--<th>
+        @Html.DisplayNameFor(model => model.precio)
+    </th>-->
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                <a asp-area="" asp-controller="Publicacions" asp-action="DetailsInmueble" asp-route-id="@item.Id">@Html.DisplayFor(modelItem => item.descripcion)</a>
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.imagen)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.direccion)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.barrio)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ambientes)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.banos)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.cochera)
+            </td>
+            <!--<td>
+        @Html.DisplayFor(modelItem => item.precio)
+    </td>-->
+        </tr>
+}
+    </tbody>
+</table>

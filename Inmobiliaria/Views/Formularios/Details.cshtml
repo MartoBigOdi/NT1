@@ -1,0 +1,54 @@
+﻿@model Inmobiliaria.Models.Formulario
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Detalless</h2>
+
+<div>
+    <h4>Formulario</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.nombre)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.nombre)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.email)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.email)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.telefono)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.telefono)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.mensaje)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.mensaje)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.tipoOperacion)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.tipoOperacion)
+        </dd>
+        <dt>
+            @Html.DisplayNameFor(model => model.tipoContacto)
+        </dt>
+        <dd>
+            @Html.DisplayFor(model => model.tipoContacto)
+        </dd>
+    </dl>
+</div>
+<div>
+    <a asp-action="Edit" asp-route-id="@Model.Id">Editar</a> |
+    <a asp-action="Index">Volver a la Lista</a>
+</div>

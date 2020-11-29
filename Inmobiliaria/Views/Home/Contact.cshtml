@@ -1,0 +1,65 @@
+﻿@{
+    ViewData["Title"] = "Contacto";
+}
+<h2>@ViewData["Title"]</h2>
+<h3>@ViewData["Message"]</h3>
+
+
+
+<form action="">
+    <fieldset>
+        <legend>Informacion Personal</legend>
+
+        <label for="nombre">Nombre:</label>
+        <input type="text" name="" id="nombre" placeholder="Tu Nombre">
+
+        <label for="email">E-mail:</label>
+        <input type="email" id="email" placeholder="Tu Correo Electronico" required>
+
+        <label for="telefono">Telefono:</label>
+        <input type="tel" id="telefono" placeholder="Tu Telefono" required>
+
+        <label for="mensaje">Mensaje:</label>
+        <textarea name="" id="mensaje" cols="30" rows="10"></textarea>
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <legend>Informacion sobre Propiedad</legend>
+
+        <label for="opciones">Tipo de operacion</label>
+        <select name="" id="opciones">
+            <option value="" disabled selected>--Seleccione--</option>
+            <option value="compra">Comprar</option>
+            <option value="vende">Vender</option>
+            <option value="alquila">Alquilar</option>
+        </select>
+
+    </fieldset>
+
+    <br>
+
+    <fieldset>
+        <legend>Contacto</legend>
+
+        <p>Como desea ser Contactado:</p>
+        <div class="forma-contacto">
+            <label for="telefono">Telefono</label>
+            <input type="radio" name="contacto" value="telefono" id="telefono">
+
+            <label for="correo">E-mail</label>
+            <input type="radio" name="contacto" value="correo" id="correo">
+        </div>
+
+
+
+    </fieldset>
+
+    <input type="submit" value="Enviar" class="boton boton-verde">
+</form>
+
+<address>
+    <strong>Support:</strong> <a href="mailto:Support@example.com">Support@example.com</a><br />
+    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
+</address>

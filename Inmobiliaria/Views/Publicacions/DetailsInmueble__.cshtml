@@ -1,0 +1,23 @@
+﻿@model Inmobiliaria.Models.Inmueble
+
+@{
+    ViewData["Title"] = "Details";
+}
+
+<h2>Details Inmueble__</h2>
+
+<h4>Inmueble</h4>
+
+<main class="contenedor">
+    <div class="grid">
+        <div>
+            <img src="@Html.DisplayNameFor(model => model.imagen)" alt="Imagen dpto" />
+            <p>@Html.DisplayFor(model => model.descripcion)</p>
+        </div>
+    </div>
+</main>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+

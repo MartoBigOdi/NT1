@@ -1,0 +1,30 @@
+﻿body {
+    margin: 0;
+    padding-top: 0;
+}
+
+
+.texto-blanco{
+    color: white;
+}
+
+
+.header {
+    background-color: #333333;
+    padding: 0 0 3px 0;
+    color: white;
+}
+
+.contenedor{
+    max-width: 76%;
+    margin: auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.flex2 {
+    display: flex;
+    justify-content: space-around
+}

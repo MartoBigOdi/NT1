@@ -1,0 +1,49 @@
+﻿@model Inmobiliaria.Models.Publicacion
+
+@{
+    ViewData["Title"] = "Edit";
+}
+
+<h2>Edit</h2>
+
+<h4>Publicacion</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="Id" />
+            <div class="form-group">
+                <label asp-for="miIdInmuebe" class="control-label"></label>
+                <input asp-for="miIdInmuebe" class="form-control" />
+                <span asp-validation-for="miIdInmuebe" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="fechaDePublicacion" class="control-label"></label>
+                <input asp-for="fechaDePublicacion" class="form-control" />
+                <span asp-validation-for="fechaDePublicacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="cantidadDeVisitas" class="control-label"></label>
+                <input asp-for="cantidadDeVisitas" class="form-control" />
+                <span asp-validation-for="cantidadDeVisitas" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="operacion" class="control-label"></label>
+                <select asp-for="operacion" class="form-control"></select>
+                <span asp-validation-for="operacion" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Save" class="btn btn-default" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}
